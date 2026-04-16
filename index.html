@@ -3,59 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SC Engineering | Software Solutions</title>
-<h1>SC Engineering</h1>
-<p>Building the future of digital infrastructure at <strong>sc-eng.co.za</strong>.</p>
+    <title>SC Engineering | Digital Infrastructure</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            text-align: center;
+            color: #1e293b;
         }
         .container {
             background: white;
             padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            max-width: 400px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
         }
-        h1 { color: #2c3e50; margin-bottom: 10px; }
-        p { color: #7f8c8d; line-height: 1.6; }
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.5rem;
+        }
+        .description {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
         input[type="email"] {
-            width: 80%;
-            padding: 10px;
-            margin: 20px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            box-sizing: border-box; /* Fixes width issues */
         }
         button {
-            background-color: #3498db;
+            background-color: #2563eb;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
             cursor: pointer;
-            font-weight: bold;
+            font-weight: 600;
+            transition: background 0.2s;
         }
-        button:hover { background-color: #2980b9; }
+        button:hover { background-color: #1d4ed8; }
+        .footer-text {
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>My Software Co.</h1>
-        <p>We are building a smart <strong>Python-powered</strong> solution to solve your daily problems. Stay tuned!</p>
+        <div class="logo-text">SC Engineering</div>
+        <p class="description">
+            Building the future of digital infrastructure. <br>
+            Our <strong>AI-powered</strong> Python solutions are launching soon.
+        </p>
         
         <form>
-            <input type="email" placeholder="Enter your email" required>
-            <br>
+            <input type="email" placeholder="Enter your business email" required>
             <button type="submit">Notify Me</button>
         </form>
+
+        <div class="footer-text">
+            © 2026 SC Engineering | sc-eng.co.za
+        </div>
     </div>
 
 </body>
