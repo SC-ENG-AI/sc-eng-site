@@ -11,24 +11,32 @@
             --dark: #0f172a; /* Deep Space Navy */
             --light: #f8fafc;
         }
-        body { font-family: 'Inter', 'Segoe UI', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background-color: var(--light); }
-        
+        body { font-family: 'Inter', 'Segoe UI', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background-color: var(--dark); }
+
+/* HEADER */  
         /* Glassmorphism Header */
-        header { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        header { background: rgb(232, 233, 233); backdrop-filter: blur(10px); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo-img { 
+            height: 150px; 
+            width: 300px; 
+            object-fit: contain;
+            border-radius: 20px; /* Optional: rounds the corners of your logo */
+        }
         .logo { font-weight: 800; font-size: 1.5rem; color: var(--secondary); text-transform: uppercase; letter-spacing: 2px; }
         nav a { margin-left: 25px; text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; }
         nav a:hover { color: var(--primary); }
 
+/* SCALABLE SOFTWARE ENGINEERING */      
+        /* Online Focus Info */
+        .online-tag { background: rgba(237, 5, 5, 0.97); color: var(--light); padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 20px; display: inline-block; }
+        
         /* Tech Hero Section */
         .hero { background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(58, 123, 213, 0.7)), url('https://unsplash.com'); 
                 height: 70vh; background-size: cover; background-position: center; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
         .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 15px; }
         .hero p { font-size: 1.2rem; max-width: 600px; opacity: 0.9; }
 
-        /* Online Focus Info */
-        .online-tag { background: rgba(0, 210, 255, 0.2); color: var(--primary); padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 20px; display: inline-block; }
-
-        /* Software Project Gallery */
+/* DIGITAL PRODUCT SHOWCASE */
         .section-title { text-align: center; margin: 60px 0 40px; font-size: 2.2rem; }
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; padding: 0 5%; }
         .project-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: 0.3s ease; border: 1px solid #e2e8f0; }
@@ -37,320 +45,320 @@
         .project-content { padding: 20px; }
         .project-content h3 { margin: 0 0 10px; color: var(--secondary); }
 
-        /* Online Consultation Form */
+/* OUR DIGITAL ECOSYSTEM */
+         .tech-stack { padding: 80px 5%; text-align: center; background: white; }
+         .tech-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 40px; 
+            margin-top: 40px; 
+            opacity: 5.8;
+        }
+        .tech-item { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            width: 100px;
+        }   
+        .tech-item img { 
+            width: 60px; 
+            height: 60px; 
+            object-fit: contain; 
+            filter: grayscale(100%); 
+            transition: 0.3s;
+        }
+        .tech-item:hover img { filter: grayscale(0.0%); transform: scale(1.1); }
+        .tech-item span { margin-top: 10px; font-weight: 600; font-size: 0.85rem; color: #64748b; }
+
+/* SERVICE PACKAGES */
+        .pricing-section { padding: 80px 5%; background-color: var(--light); text-align: center; }
+        .pricing-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+            margin-top: 50px; 
+        }
+        .pricing-card { 
+            background: white;
+            padding: 40px; 
+            border-radius: 20px; 
+            border: 1px solid #e2e8f0; 
+            transition: 0.3s; 
+            display: flex; 
+            flex-direction: column; 
+        }
+        .pricing-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .pricing-card.featured { border: 2px solid var(--primary); position: relative; }
+        .badge { 
+            position: absolute; top: -15px; left: 50%; transform: translateX(-50%); 
+            background: var(--primary); color: white; padding: 5px 15px; 
+            border-radius: 20px; font-size: 0.8rem; font-weight: bold; 
+        }
+        .price-title { font-size: 1.5rem; color: var(--secondary); margin-bottom: 10px; }
+        .price-value { font-size: 2.5rem; font-weight: 800; margin-bottom: 20px; color: var(--dark); }
+        .price-features { list-style: none; padding: 0; margin: 0 0 30px 0; text-align: left; flex-grow: 1; }
+        .price-features li { margin-bottom: 12px; color: #64748b; font-size: 0.95rem; }
+        .price-features li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 10px; }
+
+/* OUR 100% ONLINE PROCESS */
+        .remote-workflow { padding: 80px 5%; background-color: #fff; text-align: center; }
+        .workflow-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+            margin-top: 40px; 
+        }
+        .step-card { 
+            padding: 30px; 
+            border-radius: 15px; 
+            background: var(--light); 
+            border: 1px solid #e2e8f0; 
+            position: relative;
+        }
+        .step-number { 
+            background: var(--primary); 
+            color: white; 
+            width: 35px; 
+            height: 35px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 50%; 
+            font-weight: bold; 
+            margin: 0 auto 20px;
+        }
+        .step-card h3 { color: var(--secondary); margin-bottom: 15px; }
+        .step-card p { font-size: 0.95rem; color: #475569; }
+
+/* REMOTE PROJECT INQUITY */
         .contact-section { padding: 80px 5%; background: linear-gradient(to bottom, #fff, #edf2f7); display: flex; flex-direction: column; align-items: center; }
         .contact-box { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); width: 100%; max-width: 700px; }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #64748b; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #101011; }
         .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; transition: 0.3s; }
         .form-group input:focus { border-color: var(--primary); outline: none; }
         .btn-submit { background: linear-gradient(90deg, var(--secondary), var(--primary)); color: white; border: none; padding: 16px; border-radius: 8px; font-weight: 700; width: 100%; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
-
+        
+/* FOOTER FORM */
         footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 4rem 1rem; margin-top: 80px; }
         @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+        
     </style>
 </head>
 <body>
-
-<header>
-    <div class="logo">SC ENGINEERING.</div>
-    <nav>
-        <a href="#services">Home</a>
-        <a href="#projects">Service</a>
-        <a href="#contact">Contact Us</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <div class="online-tag">100% Online Operations</div>
-    <h1>Scalable Software Engineering</h1>
-    <p>We build mission-critical digital products for global startups and enterprises, delivered entirely through our remote-first engineering model.</p>
-</section>
-
-<!-- Software Project Gallery -->
-<h2 id="projects" class="section-title">Digital Product Showcase</h2>
-<div class="gallery">
-    <div class="project-card">
-        <img src="https://unsplash.com" alt="SaaS Dashboard">
-        <div class="project-content">
-            <h3>FinTech Cloud Dashboard</h3>
-            <p>A real-time data visualization platform processing 10k+ transactions per second.</p>
-        </div>
-    </div>
-    <div class="project-card">
-        <img src="https://unsplash.com" alt="Mobile App">
-        <div class="project-content">
-            <h3>HealthTech Mobile Sync</h3>
-            <p>Cross-platform React Native app with HIPAA-compliant secure cloud storage.</p>
-        </div>
-    </div>
-    <div class="project-card">
-        <img src="https://unsplash.com" alt="AI Network">
-        <div class="project-content">
-            <h3>Neural Analysis API</h3>
-            <p>Robust Python-based microservices architecture for distributed AI processing.</p>
-        </div>
-    </div>
-</div>
-<!-- Add this Tech Stack Section between the Project Showcase and the Contact Section -->
-
-<style>
-    .tech-stack { padding: 80px 5%; text-align: center; background: white; }
-    .tech-grid { 
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        gap: 40px; 
-        margin-top: 40px; 
-        opacity: 0.8;
-    }
-    .tech-item { 
-        display: flex; 
-        flex-direction: column; 
-        align-items: center; 
-        width: 100px;
-    }
-    .tech-item img { 
-        width: 60px; 
-        height: 60px; 
-        object-fit: contain; 
-        filter: grayscale(100%); 
-        transition: 0.3s;
-    }
-    .tech-item:hover img { filter: grayscale(0%); transform: scale(1.1); }
-    .tech-item span { margin-top: 10px; font-weight: 600; font-size: 0.85rem; color: #64748b; }
-</style>
-
-<section class="tech-stack">
-    <h2 class="section-title">Our Digital Ecosystem</h2>
-    <p>We leverage industry-leading technologies to build robust, scalable online solutions.</p>
     
-    <div class="tech-grid">
-        <div class="tech-item">
-            <img src="https://jsdelivr.net" alt="React">
-            <span>React / Next.js</span>
+<!--HEADER-->
+    <header>
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="SC Logo" class="logo-img">
+                
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+ <!--SCALABLE SOFTWARE ENGINEERING-->
+    <section class="hero">
+        <div class="online-tag">100% Engineering Online</div>
+        <h1>Scalable Software Engineering</h1>
+        <p>We build mission-critical digital products for global startups and enterprises, delivered entirely through our remote-first engineering model.</p>
+    </section>
+
+ <!--DIGITAL PRODUCT SHOCASE -->
+    <h2 id="projects" class="section-title">Digital Product Showcase</h2>
+    <div class="gallery">
+        <div class="project-card">
+            <img src="cloud.png" alt="SaaS Dashboard">
+            <div class="project-content">
+                <h3>FinTech Cloud Dashboard</h3>
+                <p>A real-time data visualization platform processing 10k+ transactions per second.</p>
+            </div>
         </div>
-        <div class="tech-item">
-            <img src="https://jsdelivr.net" alt="Node.js">
-            <span>Node.js</span>
+        <div class="project-card">
+            <img src="healthapp.png" alt="Mobile App">
+            <div class="project-content">
+                <h3>HealthTech Mobile Sync</h3>
+                <p>Cross-platform React Native app with HIPAA-compliant secure cloud storage.</p>
+            </div>
         </div>
-        <div class="tech-item">
-            <img src="https://jsdelivr.net" alt="Python">
-            <span>Python / AI</span>
-        </div>
-        <div class="tech-item">
-            <img src="https://jsdelivr.net" alt="AWS">
-            <span>AWS Cloud</span>
-        </div>
-        <div class="tech-item">
-            <img src="https://jsdelivr.net" alt="Docker">
-            <span>Docker</span>
-        </div>
-        <div class="tech-item">
-            <img src="https://jsdelivr.net" alt="TypeScript">
-            <span>TypeScript</span>
+        <div class="project-card">
+            <img src="neural.png" alt="AI Network">
+            <div class="project-content">
+                <h3>Neural Analysis API</h3>
+                <p>Robust Python-based microservices architecture for distributed AI processing.</p>
+            </div>
         </div>
     </div>
-</section>
-<style>
-    .remote-workflow { padding: 80px 5%; background-color: #fff; text-align: center; }
-    .workflow-grid { 
-        display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-        gap: 30px; 
-        margin-top: 40px; 
-    }
-    .step-card { 
-        padding: 30px; 
-        border-radius: 15px; 
-        background: var(--light); 
-        border: 1px solid #e2e8f0; 
-        position: relative;
-    }
-    .step-number { 
-        background: var(--primary); 
-        color: white; 
-        width: 35px; 
-        height: 35px; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        border-radius: 50%; 
-        font-weight: bold; 
-        margin: 0 auto 20px;
-    }
-    .step-card h3 { color: var(--secondary); margin-bottom: 15px; }
-    .step-card p { font-size: 0.95rem; color: #475569; }
-</style>
+    
+<!--OUR DIGITAL ECOSYSTEM-->
+    <section class="tech-stack">
+        <h2 class="section-title">Our Digital Ecosystem</h2>
+        <p>We leverage industry-leading technologies to build robust, scalable online solutions.</p>  
+        <div class="tech-grid">
+            <div class="tech-item">
+                <img src="react.png" alt="React">
+                <span>React / Next.js</span>
+            </div>
+            <div class="tech-item">
+                <img src="node.png" alt="Node.js">
+                <span>Node.js</span>
+            </div>
+            <div class="tech-item">
+                <img src="pythonai.jpg" alt="Python">
+                <span>Python / AI</span>
+            </div>
+            <div class="tech-item">
+                <img src="aws.png" alt="AWS">
+                <span>AWS Cloud</span>
+            </div>
+            <div class="tech-item">
+                <img src="docker.png" alt="Docker">
+                <span>Docker</span>
+            </div>
+            <div class="tech-item">
+                <img src="typescript.png" alt="TypeScript">
+                <span>TypeScript</span>
+            </div>
+        </div>
+    </section>
 
-<section class="remote-workflow">
-    <h2 class="section-title">Our 100% Online Process</h2>
-    <p>Modern engineering doesn't need an office. Here is how we collaborate across borders.</p>
-<!-- Add this section between your "Remote Workflow" and "Contact" sections -->
-<style>
-    .pricing-section { padding: 80px 5%; background-color: var(--light); text-align: center; }
-    .pricing-grid { 
-        display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-        gap: 30px; 
-        margin-top: 50px; 
-    }
-    .pricing-card { 
-        background: white; 
-        padding: 40px; 
-        border-radius: 20px; 
-        border: 1px solid #e2e8f0; 
-        transition: 0.3s; 
-        display: flex; 
-        flex-direction: column; 
-    }
-    .pricing-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-    .pricing-card.featured { border: 2px solid var(--primary); position: relative; }
-    .badge { 
-        position: absolute; top: -15px; left: 50%; transform: translateX(-50%); 
-        background: var(--primary); color: white; padding: 5px 15px; 
-        border-radius: 20px; font-size: 0.8rem; font-weight: bold; 
-    }
-    .price-title { font-size: 1.5rem; color: var(--secondary); margin-bottom: 10px; }
-    .price-value { font-size: 2.5rem; font-weight: 800; margin-bottom: 20px; color: var(--dark); }
-    .price-features { list-style: none; padding: 0; margin: 0 0 30px 0; text-align: left; flex-grow: 1; }
-    .price-features li { margin-bottom: 12px; color: #64748b; font-size: 0.95rem; }
-    .price-features li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 10px; }
-</style>
+ <!-- SERVICE PACKAGES -->
+    <section id="pricing" class="pricing-section">
+        <h2 class="section-title">Service Packages</h2>
+        <p>Flexible engagement models for every stage of your software journey.</p>
 
-<section id="pricing" class="pricing-section">
-    <h2 class="section-title">Service Packages</h2>
-    <p>Flexible engagement models for every stage of your software journey.</p>
+        <div class="pricing-grid">
 
-    <div class="pricing-grid">
-        <!-- MVP Tier -->
-        <div class="pricing-card">
-            <h3 class="price-title">MVP Launch</h3>
-            <div class="price-value">Tier 1</div>
-            <ul class="price-features">
-                <li>Core Feature Development</li>
-                <li>UI/UX Prototyping</li>
-                <li>Single Platform (Web or Mobile)</li>
-                <li>Market Validation Testing</li>
-                <li>6-Week Delivery Timeline</li>
-            </ul>
-            <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">Start MVP</a>
+            <!-- MVP Tier -->
+            <div class="pricing-card">
+                <h3 class="price-title">MVP Launch</h3>
+                <div class="price-value">Tier 1</div>
+                <ul class="price-features">
+                    <li>Core Feature Development</li>
+                    <li>UI/UX Prototyping</li>
+                    <li>Single Platform (Web or Mobile)</li>
+                    <li>Market Validation Testing</li>
+                    <li>6-Week Delivery Timeline</li>
+                </ul>
+                <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">Start MVP</a>
+            </div>
+
+            <!-- Full Scale Tier -->
+            <div class="pricing-card featured">
+                <div class="badge">MOST POPULAR</div>
+                <h3 class="price-title">Full Scale Build</h3>
+                <div class="price-value">Tier 2</div>
+                <ul class="price-features">
+                    <li>Complete Product Engineering</li>
+                    <li>Cross-Platform Integration</li>
+                    <li>Scalable Cloud Architecture</li>
+                    <li>Advanced API & Security</li>
+                    <li>Dedicated Project Manager</li>
+                </ul>
+                <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">Scale Up</a>
+            </div>
+
+            <!-- Maintenance Tier -->
+            <div class="pricing-card">
+                <h3 class="price-title">Continuous Care</h3>
+                <div class="price-value">Retainer</div>
+                <ul class="price-features">
+                    <li>24/7 Server Monitoring</li>
+                    <li>Monthly Security Patches</li>
+                    <li>Bug Fixes & Optimisations</li>
+                    <li>Feature Iteration Credits</li>
+                    <li>Priority Technical Support</li>
+                </ul>
+                <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">View Maintenance</a>
+            </div>
         </div>
 
-        <!-- Full Scale Tier -->
-        <div class="pricing-card featured">
-            <div class="badge">MOST POPULAR</div>
-            <h3 class="price-title">Full Scale Build</h3>
-            <div class="price-value">Tier 2</div>
-            <ul class="price-features">
-                <li>Complete Product Engineering</li>
-                <li>Cross-Platform Integration</li>
-                <li>Scalable Cloud Architecture</li>
-                <li>Advanced API & Security</li>
-                <li>Dedicated Project Manager</li>
-            </ul>
-            <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">Scale Up</a>
+<!--OUR 100% ONLINE PROCESS-->
+        <section class="remote-workflow">
+        <h2 class="section-title">Our 100% Online Process</h2>
+        <p>Modern engineering doesn't need an office. Here is how we collaborate across borders.</p>
+    </section>
+        <div class="workflow-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Virtual Discovery</h3>
+                <p>We start with a deep-dive Zoom or Meet session to understand your technical requirements and business goals.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Agile Development</h3>
+                <p>Follow our progress in real-time via Jira and GitHub. We use Slack for instant communication and daily updates.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Cloud Deployment</h3>
+                <p>We deploy your solution to secure AWS or Azure environments, ensuring a seamless digital handover.</p>
+            </div>
         </div>
+    </section>
 
-        <!-- Maintenance Tier -->
-        <div class="pricing-card">
-            <h3 class="price-title">Continuous Care</h3>
-            <div class="price-value">Retainer</div>
-            <ul class="price-features">
-                <li>24/7 Server Monitoring</li>
-                <li>Monthly Security Patches</li>
-                <li>Bug Fixes & Optimisations</li>
-                <li>Feature Iteration Credits</li>
-                <li>Priority Technical Support</li>
-            </ul>
-            <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">View Maintenance</a>
-        </div>
-    </div>
-</section>
-    <div class="workflow-grid">
-        <div class="step-card">
-            <div class="step-number">1</div>
-            <h3>Virtual Discovery</h3>
-            <p>We start with a deep-dive Zoom or Meet session to understand your technical requirements and business goals.</p>
-        </div>
-        <div class="step-card">
-            <div class="step-number">2</div>
-            <h3>Agile Development</h3>
-            <p>Follow our progress in real-time via Jira and GitHub. We use Slack for instant communication and daily updates.</p>
-        </div>
-        <div class="step-card">
-            <div class="step-number">3</div>
-            <h3>Cloud Deployment</h3>
-            <p>We deploy your solution to secure AWS or Azure environments, ensuring a seamless digital handover.</p>
-        </div>
-    </div>
-</section>
-<!-- Remote Consultation -->
-<section id="contact" class="contact-section">
-    <div class="contact-box">
-        <h2 style="margin-top:0;">Remote Project Inquiry</h2>
-        <p style="color: #64748b; margin-bottom: 30px;">Brief us on your software needs. We typically reply via Zoom/Meet within 24 hours.</p>
-        <form id="enquiryForm" action="https://formsubmit.co" method="POST">
-        <!-- These hidden inputs help with form behavior -->
+ <!--REMOTE PROJECT INQUIRY-->
+    <section id="contact" class="contact-section">
+        <div class="contact-box">
+            <h2 style="margin-top:0;">Remote Project Inquiry</h2>
+            <p style="color: #0e1011; margin-bottom: 30px;">Brief us on your software needs. We typically reply via Zoom/Meet within 24 hours.</p>
+            <form id="enquiryForm" action="https://formsubmit.co" method="POST">
         <input type="hidden" name="_subject" value="New SC Engineering Project Inquiry!">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="true">
-<form action="https://formsubmit.co" method="POST">
-    <!-- Redirect to custom success page -->
-    <input type="hidden" name="_next" value="https://yourdomain.co.za">
-    
-    <!-- Rest of your form fields -->
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <textarea name="message" placeholder="Project Details" required></textarea>
-    <button type="submit">Submit Digital Brief</button>
     <form action="https://formsubmit.co" method="POST">
-    <!-- Custom Auto-Response Message -->
-    <input type="hidden" name="_autoresponse" value="Thank you for contacting SC Engineering. We have received your software project brief and our team will get back to you within 24 hours to schedule a virtual discovery session.">
-    
-    <!-- Redirect to your success page -->
-    <input type="hidden" name="_next" value="https://yourdomain.co.za">
 
-    <!-- Your existing fields -->
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <textarea name="message" placeholder="Project Details" required></textarea>
-    <button type="submit">Submit Digital Brief</button>
-</form>
-</form>
-    <div class="form-grid">
-        <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" name="name" placeholder="Devin Tech" required>
+        <!-- Redirect to custom success page -->
+        <input type="hidden" name="_next" value="https://sc-eng.co.za">
+
+        <!-- Rest of your form fields -->
+        <form action="https://formsubmit.co" method="POST">
+
+        <!-- Custom Auto-Response Message -->
+        <input type="hidden" name="_autoresponse" value="Thank you for contacting SC Engineering. We have received your software project brief and our team will get back to you within 24 hours to schedule a virtual discovery session.">
+
+        <!-- Redirect to your success page -->
+        <input type="hidden" name="_next" value="https://sc-eng.co.za">
+    </form>
+    </form>
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="Devin Tech" required>
+            </div>
+            <div class="form-group">
+                <label>Work Email</label>
+                <input type="email" name="email" placeholder="dev@company.com" required>
+            </div>
         </div>
         <div class="form-group">
-            <label>Work Email</label>
-            <input type="email" name="email" placeholder="dev@company.com" required>
+            <label>Service Required</label>
+            <select name="service">
+                <option>SaaS Development</option>
+                <option>Mobile App (iOS/Android)</option>
+                <option>Cloud Infrastructure (DevOps)</option>
+                <option>AI/ML Integration</option>
+            </select>
         </div>
-    </div>
-    <div class="form-group">
-        <label>Service Required</label>
-        <select name="service">
-            <option>SaaS Development</option>
-            <option>Mobile App (iOS/Android)</option>
-            <option>Cloud Infrastructure (DevOps)</option>
-            <option>AI/ML Integration</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label>Project Scope</label>
-        <textarea name="details" rows="4" placeholder="Briefly describe your software requirements..." required></textarea>
-    </div>
-    <button type="submit" class="btn-submit">Submit Digital Brief</button>
-</form>
-    </div>
-</section>
+        <div class="form-group">
+            <label>Project Scope</label>
+            <textarea name="details" rows="4" placeholder="Briefly describe your software requirements..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Submit Digital Brief</button>
+    </form>
+        </div>
+    </section>
 
-<footer>
-    <p>&copy; 2025 SC Engineering. Built for the distributed world.</p>
-    <p>Github | StackOverflow | LinkedIn</p>
-</footer>
+<!--FOOTER-->
+    <footer>
+        <p>&copy; 2024 SC Engineering. Built for the distributed world.</p>
+        <p>Github | StackOverflow | LinkedIn</p>
+    </footer>
 
 </body>
 </html>
