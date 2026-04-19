@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SC Engineering | Cloud-Native Software Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         :root {
             --primary: #00d2ff; /* Tech Cyan */
@@ -32,7 +33,7 @@
         .online-tag { background: rgba(237, 5, 5, 0.97); color: var(--light); padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 20px; display: inline-block; }
         
         /* Tech Hero Section */
-        .hero { background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(58, 123, 213, 0.9)), url(".dashboard.png"); 
+        .hero { background: linear-gradient(135deg, rgba(15, 23, 42, 1), rgba(58, 123, 213, 0.7)), url("dashboard.png"); 
                 height: 100vh; background-size: cover; background-position: center; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
         .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 15px; }
         .hero p { font-size: 1.2rem; max-width: 600px; opacity: 0.9; }
@@ -144,8 +145,52 @@
         
 /* FOOTER FORM */
         footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 4rem 1rem; margin-top: 80px; }
-        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
-        
+        @media (max-width: 700px) { .form-grid { grid-template-columns: 1fr; } }
+
+        /*SOCIAL MEDIA*/ 
+                .fa {
+        padding: 10px;
+        font-size: 20px;
+        text-decoration: none;
+        border-radius: 50%;
+        }
+
+        /* Specific colour for Facebook */
+        .fa-facebook {
+        background: #3B5998;
+        color: white;
+        } 
+
+        .fa-intagram {
+        background: #3B5998;
+        color: white;
+        }
+
+        .fa-linkedin {
+        background: #0077B5;
+        color: white;
+
+        }
+        .fa-github {
+        background: #333;
+        color: white;
+        }
+
+
+        .fa {
+        padding: 10px;
+        font-size: 20px;
+        width: 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%; /* Makes them round */
+        margin: 10px;
+        }
+
+        .fa:hover {
+        opacity: 0.7;
+        }
+
     </style>
 </head>
 <body>
@@ -307,61 +352,59 @@
     </section>
 
  <!--REMOTE PROJECT INQUIRY-->
-    <section id="contact" class="contact-section">
-        <div class="contact-box">
-            <h2 style="margin-top:0;">Remote Project Inquiry</h2>
-            <p style="color: #0e1011; margin-bottom: 30px;">Brief us on your software needs. We typically reply via Zoom/Meet within 24 hours.</p>
-            <form id="enquiryForm" action="https://formsubmit.co" method="POST">
-        <input type="hidden" name="_subject" value="New SC Engineering Project Inquiry!">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="true">
-    <form action="https://formsubmit.co" method="POST">
+   <section id="contact" class="contact-section">
+    <div class="contact-box">
+        <h2 style="margin-top:0;">Remote Project Inquiry</h2>
+        <p style="color: #0e1011; margin-bottom: 30px;">Brief us on your software needs. We typically reply via Zoom/Meet within 24 hours.</p>
+        
+        <!-- SINGLE FORM TAG - Fixed nesting issues -->
+        <form id="enquiryForm" action="https://formsubmit.co/info@sc-eng.co.za" method="POST">
+            <!-- Hidden Configuration Fields -->
+            <input type="hidden" name="_subject" value="New SC Engineering Project Inquiry!">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_next" value="https://sc-eng.co.za">
+            <input type="hidden" name="_autoresponse" value="Thank you for contacting SC Engineering. We have received your software project brief and our team will get back to you within 24 hours to schedule a virtual discovery session.">
 
-        <!-- Redirect to custom success page -->
-        <input type="hidden" name="_next" value="https://sc-eng.co.za">
-
-        <!-- Rest of your form fields -->
-        <form action="https://formsubmit.co" method="POST">
-
-        <!-- Custom Auto-Response Message -->
-        <input type="hidden" name="_autoresponse" value="Thank you for contacting SC Engineering. We have received your software project brief and our team will get back to you within 24 hours to schedule a virtual discovery session.">
-
-        <!-- Redirect to your success page -->
-        <input type="hidden" name="_next" value="https://sc-eng.co.za">
-    </form>
-    </form>
-        <div class="form-grid">
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" name="name" placeholder="Devin Tech" required>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="Devin Tech" required>
+                </div>
+                <div class="form-group">
+                    <label>Work Email</label>
+                    <input type="email" name="email" placeholder="dev@company.com" required>
+                </div>
             </div>
+            
             <div class="form-group">
-                <label>Work Email</label>
-                <input type="email" name="email" placeholder="dev@company.com" required>
+                <label>Service Required</label>
+                <select name="service">
+                    <option>SaaS Development</option>
+                    <option>Mobile App (iOS/Android)</option>
+                    <option>Cloud Infrastructure (DevOps)</option>
+                    <option>AI/ML Integration</option>
+                </select>
             </div>
-        </div>
-        <div class="form-group">
-            <label>Service Required</label>
-            <select name="service">
-                <option>SaaS Development</option>
-                <option>Mobile App (iOS/Android)</option>
-                <option>Cloud Infrastructure (DevOps)</option>
-                <option>AI/ML Integration</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>Project Scope</label>
-            <textarea name="details" rows="4" placeholder="Briefly describe your software requirements..." required></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Submit Digital Brief</button>
-    </form>
-        </div>
-    </section>
+            
+            <div class="form-group">
+                <label>Project Scope</label>
+                <textarea name="details" rows="4" placeholder="Briefly describe your software requirements..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Submit Digital Brief</button>
+        </form>
+    </div>
+</section>
 
 <!--FOOTER-->
     <footer>
-        <p>&copy; 2024 SC Engineering. Built for the distributed world.</p>
-        <p>Github | StackOverflow | LinkedIn</p>
+        <p>&copy; 2024 SC Engineering |  info@sc-eng.co.za</p>
+        <p>Built for the distributed world.</p>
+<!--SOCIAL MEDIA-->
+        <a href="your-facebook-link"  target="_blank" class="fa fa-facebook"></a>
+        <a href="https://github.com" target="_blank" class="fa fa-github"></a>
+        <a href="https://linkedin.com" target="_blank" class="fa fa-linkedin"></a>
     </footer>
 
 </body>
