@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC Engineering | Cloud-Native Software Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        :root {
+            --primary: #00d2ff; /* Tech Cyan */
+            --secondary: #3a7bd5; /* Deep Digital Blue */
+            --dark: #0f172a; /* Deep Space Navy */
+            --light: #f2f5f7;
+        }
+        body { font-family: 'Inter', 'Segoe UI', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background-color: var(--light); }
+
+/* HEADER */  
+        /* Glassmorphism Header */
+        header { background: var(--light); backdrop-filter: blur(10px); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo-img { 
+            height: 100px; 
+            width: 180px; 
+            object-fit: contain;
+            border-radius: 20px; /* Optional: rounds the corners of your logo */
+        }
+        .logo { font-weight: 800; font-size: 1.5rem; color: var(--secondary); text-transform: uppercase; letter-spacing: 2px; }
+        nav a { margin-left: 60px; text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; }
+        nav a:hover { color: var(--primary); }
+    
+    </style>
+
+    <!--HEADER-->
+    <header>
+         <a href="index.html" class="logo-container">
+             <img src="logo.png" alt="SC Logo" class="logo-img">
+                
+         </a>
+        
+         <nav>
+             <a href="index.html">Home</a>
+             <a href="services.html">Services</a>
+             <a href="contact.html">Contact</a>
+         </nav>
+     </header>
