@@ -356,42 +356,45 @@
     <div class="contact-box">
         <h2 style="margin-top:0;">Remote Project Inquiry</h2>
         <p style="color: #0e1011; margin-bottom: 30px;">Brief us on your software needs. We typically reply via Zoom/Meet within 24 hours.</p>
-        <form id="enquiryForm" action="https://formspree.io/f/xlgajrpd" method="POST">
-            <!-- Hidden Configuration Fields -->
-            <input type="hidden" name="_subject" value="New SC Engineering Project Inquiry!">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="true">
-            <input type="hidden" name="_next" value="https://sc-eng.co.za">
-            <input type="hidden" name="_autoresponse" value="Thank you for contacting SC Engineering. We have received your software project brief and our team will get back to you within 24 hours to schedule a virtual discovery session.">
+       <form id="enquiryForm" action="https://formsubmit.co" method="POST">
+    <!-- Configuration -->
+    <input type="hidden" name="_subject" value="New SC Engineering Project Inquiry!">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="true">
+    <input type="hidden" name="_next" value="https://sc-eng.co.za">
+    
+    <!-- This is the auto-reply your users will receive for FREE -->
+    <input type="hidden" name="_autoresponse" value="Thank you for contacting SC Engineering. We have received your software project brief and our team will get back to you within 24 hours to schedule a virtual discovery session.">
 
-            <div class="form-grid">
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" name="name" placeholder="Devin Tech" required>
-                </div>
-                <div class="form-group">
-                    <label>Work Email</label>
-                    <input type="email" name="email" placeholder="dev@company.com" required>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label>Service Required</label>
-                <select name="service">
-                    <option>SaaS Development</option>
-                    <option>Mobile App (iOS/Android)</option>
-                    <option>Cloud Infrastructure (DevOps)</option>
-                    <option>AI/ML Integration</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label>Project Scope</label>
-                <textarea name="details" rows="4" placeholder="Briefly describe your software requirements..." required></textarea>
-            </div>
-            
-            <button type="submit" class="btn-submit">Submit Digital Brief</button>
-        </form>
+    <div class="form-grid">
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="Devin Tech" required>
+        </div>
+        <div class="form-group">
+            <label>Work Email</label>
+            <!-- Important: 'name="email"' is required for auto-response -->
+            <input type="email" name="email" placeholder="dev@company.com" required>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label>Service Required</label>
+        <select name="service">
+            <option>SaaS Development</option>
+            <option>Mobile App (iOS/Android)</option>
+            <option>Cloud Infrastructure (DevOps)</option>
+            <option>AI/ML Integration</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label>Project Scope</label>
+        <textarea name="details" rows="4" placeholder="Briefly describe your software requirements..." required></textarea>
+    </div>
+    
+    <button type="submit" class="btn-submit">Submit Digital Brief</button>
+</form>
     </div>
 </section>
 
