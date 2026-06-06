@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SC Engineering | Cloud-Native Software Solutions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         :root {
             --primary: #00d2ff; /* Tech Cyan */
@@ -14,7 +14,7 @@
         }
         body { font-family: 'Inter', 'Segoe UI', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background-color: var(--light); }
 
-        /* HEADER */  
+/* HEADER */  
         /* Glassmorphism Header */
         header { background: var(--light); backdrop-filter: blur(10px); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .logo-img { 
@@ -27,7 +27,8 @@
         nav a { margin-left: 60px; text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; }
         nav a:hover { color: var(--primary); }
 
-        /* SCALABLE SOFTWARE ENGINEERING */      
+
+/* SCALABLE SOFTWARE ENGINEERING */      
         /* Online Focus Info */
         .online-tag { background: rgba(237, 5, 5, 0.97); color: var(--light); padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 20px; display: inline-block; }
         
@@ -37,12 +38,7 @@
         .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 15px; }
         .hero p { font-size: 1.2rem; max-width: 600px; opacity: 0.9; }
 
-        /* NATIVE AI CHAT EMBED CONTAINER */
-        .ai-workspace-container { width: 100%; max-width: 1100px; margin: 60px auto 40px auto; padding: 0 20px; box-sizing: border-box; }
-        .ai-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.05); }
-        .ai-iframe { display: block; width: 100%; height: 750px; border: none; }
-
-        /* DIGITAL PRODUCT SHOWCASE */
+/* DIGITAL PRODUCT SHOWCASE */
         .section-title { text-align: center; margin: 50px 0 50px; font-size: 2.2rem; }
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(2px, 1fr)); gap: 25px; padding: 0 5%; }
         .project-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 20px rgba(247, 244, 244, 0.08); transition: 0.3s ease; border: 1px solid #e2e8f0; }
@@ -51,9 +47,9 @@
         .project-content { padding: 20px; }
         .project-content h3 { margin: 0 0 10px; color: var(--secondary); }
 
-        /* OUR DIGITAL ECOSYSTEM */
-        .tech-stack { padding: 0px 5%; text-align: center; background: var(--light); }
-        .tech-grid { 
+/* OUR DIGITAL ECOSYSTEM */
+         .tech-stack { padding: px 5%; text-align: center; background: var(--light); }
+         .tech-grid { 
             display: flex; 
             flex-wrap: wrap; 
             justify-content: center; 
@@ -77,7 +73,7 @@
         .tech-item:hover img { filter: grayscale(0.0%); transform: scale(1.1); }
         .tech-item span { margin-top: 10px; font-weight: 600; font-size: 0.85rem; color: #64748b; }
 
-        /* SERVICE PACKAGES */
+/* SERVICE PACKAGES */
         .pricing-section { padding: 80px 5%; background-color: var(--light); text-align: center; }
         .pricing-grid { 
             display: grid; 
@@ -107,8 +103,8 @@
         .price-features li { margin-bottom: 12px; color: #64748b; font-size: 0.95rem; }
         .price-features li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 10px; }
 
-        /* OUR 100% ONLINE PROCESS */
-        .remote-workflow { padding: 0px 5%; background-color: var(--light); text-align: center; }
+/* OUR 100% ONLINE PROCESS */
+        .remote-workflow { padding: px 5%; background-color: var(--light); text-align: center; }
         .workflow-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
@@ -137,8 +133,8 @@
         .step-card h3 { color: var(--secondary); margin-bottom: 15px; }
         .step-card p { font-size: 0.95rem; color: #475569; }
 
-        /* REMOTE PROJECT INQUIRY */
-        .contact-section { padding: 0px 5%; background: var(--light); display: flex; flex-direction: column; align-items: center; }
+/* REMOTE PROJECT INQUITY */
+        .contact-section { padding:px 5%; background: var(--light); display: flex; flex-direction: column; align-items: center; }
         .contact-box { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); width: 100%; max-width: 700px; }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .form-group { margin-bottom: 20px; }
@@ -147,74 +143,79 @@
         .form-group input:focus { border-color: var(--primary); outline: none; }
         .btn-submit { background: linear-gradient(90deg, var(--secondary), var(--primary)); color: white; border: none; padding: 16px; border-radius: 8px; font-weight: 700; width: 100%; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
         
-        /* FOOTER FORM */
+/* FOOTER FORM */
         footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 4rem 1rem; margin-top: 80px; }
         @media (max-width: 700px) { .form-grid { grid-template-columns: 1fr; } }
 
-        /* SOCIAL MEDIA */ 
-        .fa {
-            padding: 10px;
-            font-size: 20px;
-            text-decoration: none;
-            border-radius: 50%;
+        /*SOCIAL MEDIA*/ 
+                .fa {
+        padding: 10px;
+        font-size: 20px;
+        text-decoration: none;
+        border-radius: 50%;
         }
 
         /* Specific colour for Facebook */
         .fa-facebook {
-            background: #3B5998;
-            color: white;
+        background: #3B5998;
+        color: white;
         } 
 
         .fa-intagram {
-            background: #3B5998;
-            color: white;
+        background: #3B5998;
+        color: white;
         }
 
         .fa-linkedin {
-            background: #0077B5;
-            color: white;
+        background: #0077B5;
+        color: white;
+
         }
-        
         .fa-github {
-            background: #333;
-            color: white;
+        background: #333;
+        color: white;
         }
     </style>
 </head>
 <body>
 
-    <!-- GLASSMORPHISM HEADER -->
     <header>
         <div class="logo">SC Engineering</div>
         <nav>
-            <a href="#showcase">Showcase</a>
-            <a href="#pricing">Packages</a>
-            <a href="#process">Our Process</a>
-            <a href="#contact">Inquiry</a>
+            <a href="#">Showcase</a>
+            <a href="#">Packages</a>
+            <a href="#">Our Process</a>
+            <a href="#">Inquiry</a>
         </nav>
     </header>
 
-    <!-- TECH HERO SECTION -->
+    <!-- Tech Hero Section -->
     <section class="hero">
         <span class="online-tag">100% Remote Operations</span>
         <h1>Cloud-Native Software Architecture</h1>
         <p>Engineering scalable corporate systems, automated software pipelines, and robust start-up MVPs tailored perfectly to modern enterprise ecosystems.</p>
     </section>
 
- <!-- ======================================================== -->
-<!-- LISA ENTERPRISE AI WORKSPACE EMBED (SUBDOMAIN ROUTE)    -->
-<!-- ======================================================== -->
-<div style="width: 100%; max-width: 1100px; margin: 40px auto; padding: 0 20px; box-sizing: border-box;">
-    <div style="background: #ffffff; border: 1px solid #e4e4e7; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);">
-        <!-- NOTE: Replaced the /embed/ path with the clean direct .hf.space subdomain link -->
-        <iframe 
-            src="https://sc-eng-chatbox.hf.space" 
-            frameborder="0" 
-            width="100%" 
-            height="750px" 
-            style="display: block; min-height: 750px;"
-            allow="microphone; clipboard-write; autoplay">
-        </iframe>
+    <!-- ======================================================== -->
+    <!-- CHATBOX INSERTED HERE (Bypasses browser cross-origin blocks) -->
+    <!-- ======================================================== -->
+    <div style="width: 100%; max-width: 1100px; margin: 50px auto; padding: 0 20px; box-sizing: border-box;">
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);">
+            <iframe 
+                src="https://hf.space" 
+                frameborder="0" 
+                width="100%" 
+                height="750px" 
+                style="display: block; min-height: 750px;"
+                allow="clipboard-write">
+            </iframe>
+        </div>
     </div>
-</div>
+    <!-- ======================================================== -->
 
+    <!-- DIGITAL PRODUCT SHOWCASE -->
+    <h2 class="section-title">Digital Product Showcase</h2>
+    <div class="gallery">
+        <div class="project-card">
+            <div class="project-content">
+                <h3>Enterprise SaaS Platform</h3>
