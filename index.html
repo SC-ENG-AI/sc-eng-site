@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SC Engineering | Cloud-Native Software Solutions</title>
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         :root {
             --primary: #00d2ff; /* Tech Cyan */
@@ -175,47 +175,243 @@
         background: #333;
         color: white;
         }
+
+
+        .fa {
+        padding: 10px;
+        font-size: 20px;
+        width: 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%; /* Makes them round */
+        margin: 10px;
+        }
+
+        .fa:hover {
+        opacity: 0.7;
+        }
+
     </style>
 </head>
 <body>
-
+    
+<!--HEADER-->
     <header>
-        <div class="logo">SC Engineering</div>
-        <nav>
-            <a href="#">Showcase</a>
-            <a href="#">Packages</a>
-            <a href="#">Our Process</a>
-            <a href="#">Inquiry</a>
-        </nav>
-    </header>
+         <a href="index.html" class="logo-container">
+             <img src="logo.png" alt="SC Logo" class="logo-img">
+                
+         </a>
+        
+         <nav>
+             <a href="index.html">Home</a>
+             <a href="services.html">Services</a>
+             <a href="contact.html">Contact</a>
+         </nav>
+     </header>
 
-    <!-- Tech Hero Section -->
+
+
+ <!--SCALABLE SOFTWARE ENGINEERING-->
     <section class="hero">
-        <span class="online-tag">100% Remote Operations</span>
-        <h1>Cloud-Native Software Architecture</h1>
-        <p>Engineering scalable corporate systems, automated software pipelines, and robust start-up MVPs tailored perfectly to modern enterprise ecosystems.</p>
+        <div class="online-tag">100% Engineering Online</div>
+        <h1>Scalable Software Engineering</h1>
+        <p>We build mission-critical digital products for global startups and enterprises, delivered entirely through our remote-first engineering model.</p>
     </section>
 
-    <!-- ======================================================== -->
-    <!-- CHATBOX INSERTED HERE (Bypasses browser cross-origin blocks) -->
-    <!-- ======================================================== -->
-    <div style="width: 100%; max-width: 1100px; margin: 50px auto; padding: 0 20px; box-sizing: border-box;">
-        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);">
-            <iframe 
-                src="https://hf.space" 
-                frameborder="0" 
-                width="100%" 
-                height="750px" 
-                style="display: block; min-height: 750px;"
-                allow="clipboard-write">
-            </iframe>
-        </div>
-    </div>
-    <!-- ======================================================== -->
-
-    <!-- DIGITAL PRODUCT SHOWCASE -->
-    <h2 class="section-title">Digital Product Showcase</h2>
+ <!--DIGITAL PRODUCT SHOCASE -->
+    <h2 id="projects" class="section-title">Digital Product Showcase</h2>
     <div class="gallery">
         <div class="project-card">
+            <img src="cloud.png" alt="SaaS Dashboard">
             <div class="project-content">
-                <h3>Enterprise SaaS Platform</h3>
+                <h3>FinTech Cloud Dashboard</h3>
+                <p>A real-time data visualization platform processing 10k+ transactions per second.</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="healthapp.png" alt="Mobile App">
+            <div class="project-content">
+                <h3>HealthTech Mobile Sync</h3>
+                <p>Cross-platform React Native app with HIPAA-compliant secure cloud storage.</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="neural.png" alt="AI Network">
+            <div class="project-content">
+                <h3>Neural Analysis API</h3>
+                <p>Robust Python-based microservices architecture for distributed AI processing.</p>
+            </div>
+        </div>
+    </div>
+    
+<!--OUR DIGITAL ECOSYSTEM-->
+    <section class="tech-stack">
+        <h2 class="section-title">Our Digital Ecosystem</h2>
+        <p>We leverage industry-leading technologies to build robust, scalable online solutions.</p>  
+        <div class="tech-grid">
+            <div class="tech-item">
+                <img src="react.png" alt="React">
+                <span>React / Next.js</span>
+            </div>
+            <div class="tech-item">
+                <img src="node.png" alt="Node.js">
+                <span>Node.js</span>
+            </div>
+            <div class="tech-item">
+                <img src="pythonai.jpg" alt="Python">
+                <span>Python / AI</span>
+            </div>
+            <div class="tech-item">
+                <img src="aws.png" alt="AWS">
+                <span>AWS Cloud</span>
+            </div>
+            <div class="tech-item">
+                <img src="docker.png" alt="Docker">
+                <span>Docker</span>
+            </div>
+            <div class="tech-item">
+                <img src="typescript.png" alt="TypeScript">
+                <span>TypeScript</span>
+            </div>
+        </div>
+    </section>
+
+ <!-- SERVICE PACKAGES -->
+    <section id="pricing" class="pricing-section">
+        <h2 class="section-title">Service Packages</h2>
+        <p>Flexible engagement models for every stage of your software journey.</p>
+
+        <div class="pricing-grid">
+
+            <!-- MVP Tier -->
+            <div class="pricing-card">
+                <h3 class="price-title">MVP Launch</h3>
+                <div class="price-value">Tier 1</div>
+                <ul class="price-features">
+                    <li>Core Feature Development</li>
+                    <li>UI/UX Prototyping</li>
+                    <li>Single Platform (Web or Mobile)</li>
+                    <li>Market Validation Testing</li>
+                    <li>6-Week Delivery Timeline</li>
+                </ul>
+                <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">Start MVP</a>
+            </div>
+
+            <!-- Full Scale Tier -->
+            <div class="pricing-card featured">
+                <div class="badge">MOST POPULAR</div>
+                <h3 class="price-title">Full Scale Build</h3>
+                <div class="price-value">Tier 2</div>
+                <ul class="price-features">
+                    <li>Complete Product Engineering</li>
+                    <li>Cross-Platform Integration</li>
+                    <li>Scalable Cloud Architecture</li>
+                    <li>Advanced API & Security</li>
+                    <li>Dedicated Project Manager</li>
+                </ul>
+                <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">Scale Up</a>
+            </div>
+
+            <!-- Maintenance Tier -->
+            <div class="pricing-card">
+                <h3 class="price-title">Continuous Care</h3>
+                <div class="price-value">Retainer</div>
+                <ul class="price-features">
+                    <li>24/7 Server Monitoring</li>
+                    <li>Monthly Security Patches</li>
+                    <li>Bug Fixes & Optimisations</li>
+                    <li>Feature Iteration Credits</li>
+                    <li>Priority Technical Support</li>
+                </ul>
+                <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">View Maintenance</a>
+            </div>
+        </div>
+
+<!--OUR 100% ONLINE PROCESS-->
+        <section class="remote-workflow">
+        <h2 class="section-title">Our 100% Online Process</h2>
+        <p>Modern engineering doesn't need an office. Here is how we collaborate across borders.</p>
+    </section>
+        <div class="workflow-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Virtual Discovery</h3>
+                <p>We start with a deep-dive Zoom or Meet session to understand your technical requirements and business goals.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Agile Development</h3>
+                <p>Follow our progress in real-time via Jira and GitHub. We use Slack for instant communication and daily updates.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Cloud Deployment</h3>
+                <p>We deploy your solution to secure AWS or Azure environments, ensuring a seamless digital handover.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- REMOTE PROJECT INQUIRY -->
+<section id="contact" class="contact-section">
+    <div class="contact-box">
+        <h2 style="margin-top:0;">Remote Project Inquiry</h2>
+        <p style="color: #0e1011; margin-bottom: 30px;">Brief us on your software needs. We typically reply via Zoom/Meet within 24 hours.</p>
+        
+        <form id="enquiryForm" action="https://formsubmit.co/info.scengineering1@gmail.com" method="POST">
+            <!-- START CONFIGURATION -->
+            <input type="hidden" name="_subject" value="New SC Engineering Project Inquiry!">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_next" value="https://sc-eng.co.za/success.html">
+            <input type="hidden" name="_replyto" value="info@sc-eng.co.za">
+            
+            <!-- Honeypot (Spam Protection) -->
+            <input type="text" name="_honey" style="display:none">
+            
+            <!-- Auto-Response Message -->
+            <input type="hidden" name="_autoresponse" value="Thank you for contacting SC Engineering. We have received your software project brief and our team will get back to you within 24 hours to schedule a virtual discovery session.">
+            <!-- END CONFIGURATION -->
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="Devin Tech" required>
+                </div>
+                <div class="form-group">
+                    <label>Work Email</label>
+                    <input type="email" name="email" placeholder="dev@company.com" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Service Required</label>
+                <select name="service">
+                    <option value="SaaS Development">SaaS Development</option>
+                    <option value="Mobile App (iOS/Android)">Mobile App (iOS/Android)</option>
+                    <option value="Cloud Infrastructure (DevOps)">Cloud Infrastructure (DevOps)</option>
+                    <option value="AI/ML Integration">AI/ML Integration</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Project Scope</label>
+                <textarea name="details" rows="4" placeholder="Briefly describe your software requirements..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Submit Digital Brief</button>
+        </form>
+    </div>
+</section>
+
+<!--FOOTER-->
+    <footer>
+        <p>&copy; 2024 SC Engineering |  info@sc-eng.co.za</p>
+        <p>Built for the distributed world.</p>
+<!--SOCIAL MEDIA-->
+        <a href="https://www.facebook.com/profile.php?id=61565320015031"  target="_blank" class="fa fa-facebook"></a>
+        <a href="https://github.com/SC-ENG-AI" target="_blank" class="fa fa-github"></a>
+        <a href="https://www.linkedin.com/checkpoint/challen" target="_blank" class="fa fa-linkedin"></a>
+    </footer>
+
+</body>
+</html>
