@@ -13,7 +13,7 @@
             --light: #f2f5f7;
         }
         
-        * { box-sizing: border-box; } /* Prevents padding from breaking element widths */
+        * { box-sizing: border-box; }
 
         body { 
             font-family: 'Inter', 'Segoe UI', sans-serif; 
@@ -57,7 +57,7 @@
         }
         nav a:hover { color: var(--primary); }
 
-        /* SCALABLE SOFTWARE ENGINEERING HERO */      
+        /* HERO SECTION */      
         .online-tag { 
             background: rgba(237, 5, 5, 0.97); 
             color: var(--light); 
@@ -94,7 +94,7 @@
             margin-bottom: 0;
         }
 
-        /* DIGITAL PRODUCT SHOWCASE */
+        /* SHOWCASE GALLERY */
         .section-title { 
             text-align: center; 
             margin: 60px 20px 30px; 
@@ -129,7 +129,7 @@
         .project-content { padding: 20px; }
         .project-content h3 { margin: 0 0 10px; color: var(--secondary); }
 
-        /* OUR DIGITAL ECOSYSTEM */
+        /* TECH STACK ECOSYSTEM */
         .tech-stack { padding: 60px 5%; text-align: center; background: var(--light); }
         .tech-grid { 
             display: flex; 
@@ -184,7 +184,7 @@
         .price-features li { margin-bottom: 12px; color: #64748b; font-size: 0.95rem; }
         .price-features li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 10px; }
 
-        /* OUR 100% ONLINE PROCESS */
+        /* ONLINE PROCESS WORKFLOW */
         .remote-workflow { padding: 60px 5%; background-color: var(--light); text-align: center; }
         .workflow-grid { 
             display: grid; 
@@ -214,7 +214,7 @@
         .step-card h3 { color: var(--secondary); margin-bottom: 15px; }
         .step-card p { font-size: 0.95rem; color: #475569; margin-bottom: 0; }
 
-        /* REMOTE PROJECT INQUIRY */
+        /* INQUIRY FORM */
         .contact-section { padding: 60px 5%; background: var(--light); display: flex; flex-direction: column; align-items: center; }
         .contact-box { background: white; padding: clamp(20px, 5vw, 40px); border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); width: 100%; max-width: 700px; }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -224,21 +224,14 @@
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--primary); outline: none; }
         .btn-submit { background: linear-gradient(90deg, var(--secondary), var(--primary)); color: white; border: none; padding: 16px; border-radius: 8px; font-weight: 700; width: 100%; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
         
-        /* FOOTER & SOCIAL MEDIA */
+        /* FOOTER & SOCIALS */
         footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 4rem 1rem; }
         footer p { margin: 5px 0; }
         .social-container { margin-top: 20px; }
         .fa {
-            padding: 10px;
-            font-size: 20px;
-            width: 40px;
-            height: 40px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50%; 
-            margin: 8px;
-            display: inline-block;
-            line-height: 20px;
+            padding: 10px; font-size: 20px; width: 40px; height: 40px;
+            text-align: center; text-decoration: none; border-radius: 50%; 
+            margin: 8px; display: inline-block; line-height: 20px;
         }
         .fa:hover { opacity: 0.7; }
         .fa-facebook { background: #3B5998; color: white; } 
@@ -246,37 +239,54 @@
         .fa-linkedin { background: #0077B5; color: white; }
         .fa-github { background: #333; color: white; }
 
-        /* RESPONSIVE BREAKPOINTS (TABLETS & PHONES) */
+        /* RESPONSIVE LAYOUT MEDIA QUERIES */
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-                padding: 1.5rem 5%;
-            }
-            nav {
-                gap: 20px;
-            }
-            .form-grid { 
-                grid-template-columns: 1fr; /* Form turns into 1 column on smaller screens */
-                gap: 0; 
-            }
+            header { flex-direction: column; gap: 15px; padding: 1.5rem 5%; }
+            nav { gap: 20px; }
+            .form-grid { grid-template-columns: 1fr; gap: 0; }
+        }
+        @media (max-width: 480px) {
+            nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            nav a { font-size: 0.9rem; }
         }
 
-        @media (max-width: 480px) {
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
+        /* 📱 RESPONSIVE CHATBOX CSS CONTAINER */
+        #hf-chatbox-container {
+            display: none; 
+            position: fixed; 
+            bottom: 120px; 
+            right: 20px; 
+            width: 350px; 
+            height: 490px; 
+            z-index: 2147483647; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+            border-radius: 12px; 
+            overflow: hidden; 
+            border: 1px solid #e0e0e0; 
+            background-color: #ffffff; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        @media (max-width: 500px) {
+            #hf-chatbox-container {
+                bottom: 100px;
+                right: 10px;
+                left: 10px;
+                width: calc(100% - 20px); 
+                height: 60vh;
             }
-            nav a {
-                font-size: 0.9rem;
+            #hf-chat-trigger {
+                width: 75px !important;  
+                height: 75px !important;
+                bottom: 15px !important;
+                right: 15px !important;
             }
+            #hf-chat-trigger span { font-size: 8px !important; }
         }
     </style>
 </head>
 <body>
     
-    <!--HEADER-->
     <header>
          <a href="index.html" class="logo-container">
              <img src="logo.png" alt="SC Logo" class="logo-img">
@@ -288,15 +298,13 @@
          </nav>
      </header>
 
-     <!--SCALABLE SOFTWARE ENGINEERING-->
-    <section class="hero">
+     <section class="hero">
         <div class="online-tag">100% Engineering Online</div>
         <h1>Scalable Software Engineering</h1>
         <p>We build mission-critical digital products for global startups and enterprises, delivered entirely through our remote-first engineering model.</p>
     </section>
 
-     <!--DIGITAL PRODUCT SHOWCASE -->
-    <h2 id="projects" class="section-title">Digital Product Showcase</h2>
+     <h2 id="projects" class="section-title">Digital Product Showcase</h2>
     <div class="gallery">
         <div class="project-card">
             <img src="cloud.png" alt="SaaS Dashboard">
@@ -321,7 +329,6 @@
         </div>
     </div>
     
-    <!--OUR DIGITAL ECOSYSTEM-->
     <section class="tech-stack">
         <h2 class="section-title">Our Digital Ecosystem</h2>
         <p class="section-subtitle">We leverage industry-leading technologies to build robust, scalable online solutions.</p>  
@@ -353,13 +360,10 @@
         </div>
     </section>
 
-     <!-- SERVICE PACKAGES -->
-    <section id="pricing" class="pricing-section">
+     <section id="pricing" class="pricing-section">
         <h2 class="section-title">Service Packages</h2>
         <p class="section-subtitle">Flexible engagement models for every stage of your software journey.</p>
-
         <div class="pricing-grid">
-            <!-- MVP Tier -->
             <div class="pricing-card">
                 <h3 class="price-title">MVP Launch</h3>
                 <div class="price-value">Tier 1</div>
@@ -372,8 +376,6 @@
                 </ul>
                 <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">Start MVP</a>
             </div>
-
-            <!-- Full Scale Tier -->
             <div class="pricing-card featured">
                 <div class="badge">MOST POPULAR</div>
                 <h3 class="price-title">Full Scale Build</h3>
@@ -387,8 +389,6 @@
                 </ul>
                 <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">Scale Up</a>
             </div>
-
-            <!-- Maintenance Tier -->
             <div class="pricing-card">
                 <h3 class="price-title">Continuous Care</h3>
                 <div class="price-value">Retainer</div>
@@ -404,11 +404,9 @@
         </div>
     </section>
 
-    <!--OUR 100% ONLINE PROCESS-->
     <section class="remote-workflow">
         <h2 class="section-title">Our 100% Online Process</h2>
         <p class="section-subtitle">Modern engineering doesn't need an office. Here is how we collaborate across borders.</p>
-        
         <div class="workflow-grid">
             <div class="step-card">
                 <div class="step-number">1</div>
@@ -428,22 +426,19 @@
         </div>
     </section>
       
-    <!-- REMOTE PROJECT INQUIRY -->
     <section id="contact" class="contact-section">
         <div class="contact-box">
             <h2 style="margin-top:0; text-align: center;">Remote Project Inquiry</h2>
-            <p style="color: #64748b; margin-bottom: 30px; text-align: center;">Brief us on your software needs. We typically reply via Zoom/Meet within 24 hours.</p>
+            <p style="color: #64748b; margin-bottom: 30px; text-align: center;">Brief us on your software needs. We typically reply within 24 hours.</p>
             
             <form id="enquiryForm" action="https://formsubmit.co/info.scengineering1@gmail.com" method="POST">
-                <!-- START CONFIGURATION -->
                 <input type="hidden" name="_subject" value="New SC Engineering Project Inquiry!">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="true">
                 <input type="hidden" name="_next" value="https://sc-eng.co.za/success.html">
                 <input type="hidden" name="_replyto" value="info@sc-eng.co.za">
                 <input type="text" name="_honey" style="display:none">
-                <input type="hidden" name="_autoresponse" value="Thank you for contacting SC Engineering. We have received your software project brief and our team will get back to you within 24 hours to schedule a virtual discovery session.">
-                <!-- END CONFIGURATION -->
+                <input type="hidden" name="_autoresponse" value="Thank you for contacting SC Engineering. We have received your software project brief and our team will get back to you within 24 hours.">
 
                 <div class="form-grid">
                     <div class="form-group">
@@ -455,7 +450,6 @@
                         <input type="email" name="email" placeholder="dev@company.com" required>
                     </div>
                 </div>
-                
                 <div class="form-group">
                     <label>Service Required</label>
                     <select name="service">
@@ -465,64 +459,42 @@
                         <option value="AI/ML Integration">AI/ML Integration</option>
                     </select>
                 </div>
-                
                 <div class="form-group">
                     <label>Project Scope</label>
                     <textarea name="details" rows="4" placeholder="Briefly describe your software requirements..." required></textarea>
                 </div>
-                
                 <button type="submit" class="btn-submit">Submit Digital Brief</button>
             </form>
         </div>
     </section>
 
-    <!-- 🟢 SMART MOBILE-HIDDEN CHATBOX START -->
-    <style>
-      /* Hides the entire chat application completely on small mobile screens */
-      @media (max-width: 767px) {
-        #hf-chatbox-container, #hf-chat-trigger {
-          display: none !important;
-        }
-      }
-    </style>
-
-    <!-- 1. The Round Floating Trigger Button with Text Inside -->
     <button id="hf-chat-trigger" style="position: fixed; bottom: 20px; right: 20px; width: 85px; height: 85px; border-radius: 50%; background-color: #007bff; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; z-index: 2147483647; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: transform 0.2s ease; padding: 5px; box-sizing: border-box;">
-      <!-- Small SVG Chat Icon -->
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 2px;">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
       </svg>
-      <!-- Text Inside the Circle -->
       <span style="color: #ffffff; font-size: 9px; font-weight: bold; text-align: center; font-family: sans-serif; line-height: 1.1; word-spacing: 100vw;">Chat with Lisa</span>
     </button>
 
-    <!-- 2. The Integrated Chatbox Window Container -->
-    <div id="hf-chatbox-container" style="display: none; position: fixed; bottom: 120px; right: 20px; width: 350px; height: 490px; z-index: 2147483647; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0; background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-      
-      <!-- Window Header Controls Bar -->
+    <div id="hf-chatbox-container">
       <div style="background-color: #007bff; color: #ffffff; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; height: 40px; box-sizing: border-box;">
         <span style="font-size: 14px; font-weight: 600;">Lisa AI</span>
         <div style="display: flex; gap: 14px; align-items: center;">
-          <!-- Minimize Button -->
-          <button id="hf-minimize-btn" title="Minimize" style="background: none; border: none; color: #ffffff; cursor: pointer; font-size: 16px; padding: 0 2px; line-height: 1; opacity: 0.85; transition: opacity 0.2s;">—</button>
-          <!-- Close X Button -->
-          <button id="hf-close-btn" title="Close" style="background: none; border: none; color: #ffffff; cursor: pointer; font-size: 20px; padding: 0 2px; line-height: 1; opacity: 0.85; transition: opacity 0.2s;">&times;</button>
+          <button id="hf-minimize-btn" title="Minimize" style="background: none; border: none; color: #ffffff; cursor: pointer; font-size: 16px; padding: 0 2px; line-height: 1; opacity: 0.85;">—</button>
+          <button id="hf-close-btn" title="Close" style="background: none; border: none; color: #ffffff; cursor: pointer; font-size: 20px; padding: 0 2px; line-height: 1; opacity: 0.85;">&times;</button>
         </div>
       </div>
 
-      <!-- The App IFrame Area -->
       <div style="width: 100%; height: calc(100% - 40px);">
-      <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.19.2/gradio.js"></script>
-        <gradio-app 
-          src="https://sc-eng-chatbox.hf.space" 
-          theme="light" 
-          eager="true"
-          style="width: 100%; height: 100%; border: none;">
-        </gradio-app>
+        <iframe
+          src="https://sc-eng-chatbox.hf.space/?__theme=light"
+          frameborder="0"
+          width="100%"
+          height="100%"
+          allow="microphone">
+        </iframe>
       </div>
     </div>
 
-    <!-- 3. Script to Manage Click Interactions -->
     <script>
       const chatTrigger = document.getElementById('hf-chat-trigger');
       const chatContainer = document.getElementById('hf-chatbox-container');
@@ -537,17 +509,9 @@
         }
       });
 
-      minimizeBtn.addEventListener('click', function() {
-        chatContainer.style.display = 'none';
-      });
-
-      closeBtn.addEventListener('click', function() {
-        chatContainer.style.display = 'none';
-      });
+      minimizeBtn.addEventListener('click', function() { chatContainer.style.display = 'none'; });
+      closeBtn.addEventListener('click', function() { chatContainer.style.display = 'none'; });
     </script>
-    <!-- 🟢 SMART MOBILE-HIDDEN CHATBOX END -->
-
-    <!--FOOTER-->
     <footer>
         <p>&copy; 2024 SC Engineering | info@sc-eng.co.za</p>
         <p>Built for the distributed world.</p>
@@ -560,5 +524,3 @@
 
 </body>
 </html>
-
-```
