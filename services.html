@@ -12,34 +12,66 @@
             --dark: #0f172a; /* Deep Space Navy */
             --light: #f2f5f7;
         }
-        body { font-family: 'Inter', 'Segoe UI', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background-color: var(--light); }
+        
+        * { box-sizing: border-box; } /* Prevents sizing overflow across different screens */
 
-/* HEADER */  
-        /* Glassmorphism Header */
-        header { background: var(--light); backdrop-filter: blur(10px); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .logo-img { 
-            height: 100px; 
-            width: 180px; 
-            object-fit: contain;
-            border-radius: 20px; /* Optional: rounds the corners of your logo */
+        body { 
+            font-family: 'Inter', 'Segoe UI', sans-serif; 
+            margin: 0; 
+            color: var(--dark); 
+            line-height: 1.6; 
+            background-color: var(--light); 
         }
-        .logo { font-weight: 800; font-size: 1.5rem; color: var(--secondary); text-transform: uppercase; letter-spacing: 2px; }
-        nav a { margin-left: 60px; text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; }
+
+        /* HEADER */  
+        header { 
+            background: var(--light); 
+            backdrop-filter: blur(10px); 
+            padding: 1rem 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-img { 
+            height: auto; 
+            max-height: 80px; 
+            width: 100%;
+            max-width: 180px; 
+            object-fit: contain;
+            border-radius: 20px; 
+        }
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+        nav a { 
+            text-decoration: none; 
+            color: var(--dark); 
+            font-weight: 600; 
+            font-size: 0.95rem; 
+            transition: color 0.2s ease;
+        }
         nav a:hover { color: var(--primary); }
 
-
-
-/* SERVICE PACKAGES */
-        .pricing-section { padding: 80px 5%; background-color: var(--light); text-align: center; }
+        /* SERVICE PACKAGES */
+        .pricing-section { padding: 60px 5%; background-color: var(--light); text-align: center; }
         .pricing-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
             gap: 30px; 
-            margin-top: 50px; 
+            margin-top: 40px; 
         }
         .pricing-card { 
             background: white;
-            padding: 40px; 
+            padding: 30px; 
             border-radius: 20px; 
             border: 1px solid #e2e8f0; 
             transition: 0.3s; 
@@ -60,67 +92,95 @@
         .price-features li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 10px; }
         .btn-submit { background: linear-gradient(90deg, var(--secondary), var(--primary)); color: white; border: none; padding: 16px; border-radius: 8px; font-weight: 700; width: 100%; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
 
-
-
-/* FOOTER FORM */
+        /* FOOTER */
         footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 4rem 1rem; margin-top: 80px; }
-        @media (max-width: 700px) { .form-grid { grid-template-columns: 1fr; } }
+        footer p { margin: 5px 0; }
 
-        /*SOCIAL MEDIA*/ 
-                .fa {
-        padding: 10px;
-        font-size: 20px;
-        text-decoration: none;
-        border-radius: 50%;
+        /* SOCIAL MEDIA */ 
+        .social-container {
+            margin-top: 20px;
         }
-
-        /* Specific colour for Facebook */
-        .fa-facebook {
-        background: #3B5998;
-        color: white;
-        } 
-
-        .fa-intagram {
-        background: #3B5998;
-        color: white;
-        }
-
-        .fa-linkedin {
-        background: #0077B5;
-        color: white;
-
-        }
-        .fa-github {
-        background: #333;
-        color: white;
-        }
-
-
         .fa {
-        padding: 10px;
-        font-size: 20px;
-        width: 20px;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 50%; /* Makes them round */
-        margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+            margin: 8px;
+            display: inline-block;
+            line-height: 20px;
+        }
+        .fa:hover { opacity: 0.7; }
+        .fa-facebook { background: #3B5998; color: white; } 
+        .fa-instagram { background: #E1306C; color: white; } /* Corrected spelling typo and added brand hex color */
+        .fa-linkedin { background: #0077B5; color: white; }
+        .fa-github { background: #333; color: white; }
+
+        /* GLOBAL RESPONSIVE MEDIA QUERIES */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 1.5rem 5%;
+            }
+            nav {
+                gap: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            nav a {
+                font-size: 0.9rem;
+            }
         }
 
-        .fa:hover {
-        opacity: 0.7;
+        /* 📱 RESPONSIVE CHATBOX CONTAINER WIDGET */
+        #hf-chatbox-container {
+            display: none; 
+            position: fixed; 
+            bottom: 120px; 
+            right: 20px; 
+            width: 350px; 
+            height: 490px; 
+            z-index: 2147483647; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+            border-radius: 12px; 
+            overflow: hidden; 
+            border: 1px solid #e0e0e0; 
+            background-color: #ffffff; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
+        @media (max-width: 500px) {
+            #hf-chatbox-container {
+                bottom: 100px;
+                right: 10px;
+                left: 10px;
+                width: calc(100% - 20px); 
+                height: 60vh;
+            }
+            #hf-chat-trigger {
+                width: 75px !important;  
+                height: 75px !important;
+                bottom: 15px !important;
+                right: 15px !important;
+            }
+            #hf-chat-trigger span { font-size: 8px !important; }
+        }
     </style>
 </head>
 <body>
     
-<!--HEADER-->
     <header>
          <a href="index.html" class="logo-container">
              <img src="logo.png" alt="SC Logo" class="logo-img">
-                
          </a>
-        
          <nav>
              <a href="index.html">Home</a>
              <a href="services.html">Services</a>
@@ -128,17 +188,12 @@
          </nav>
      </header>
 
-
-
-
- <!-- SERVICE PACKAGES -->
-    <section id="pricing" class="pricing-section">
-        <h2 class="section-title">Service Packages</h2>
-        <p>Flexible engagement models for every stage of your software journey.</p>
+     <section id="pricing" class="pricing-section">
+        <h2 class="section-title" style="margin-top: 0;">Service Packages</h2>
+        <p style="color: #64748b; margin-bottom: 20px;">Flexible engagement models for every stage of your software journey.</p>
 
         <div class="pricing-grid">
 
-            <!-- MVP Tier -->
             <div class="pricing-card">
                 <h3 class="price-title">MVP Launch</h3>
                 <div class="price-value">Tier 1</div>
@@ -149,10 +204,9 @@
                     <li>Market Validation Testing</li>
                     <li>6-Week Delivery Timeline</li>
                 </ul>
-                <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">Start MVP</a>
+                <a href="contact.html" class="btn-submit" style="text-decoration:none; text-align:center;">Start MVP</a>
             </div>
 
-            <!-- Full Scale Tier -->
             <div class="pricing-card featured">
                 <div class="badge">MOST POPULAR</div>
                 <h3 class="price-title">Full Scale Build</h3>
@@ -164,10 +218,9 @@
                     <li>Advanced API & Security</li>
                     <li>Dedicated Project Manager</li>
                 </ul>
-                <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">Scale Up</a>
+                <a href="contact.html" class="btn-submit" style="text-decoration:none; text-align:center;">Scale Up</a>
             </div>
 
-            <!-- Maintenance Tier -->
             <div class="pricing-card">
                 <h3 class="price-title">Continuous Care</h3>
                 <div class="price-value">Retainer</div>
@@ -178,18 +231,63 @@
                     <li>Feature Iteration Credits</li>
                     <li>Priority Technical Support</li>
                 </ul>
-                <a href="#contact" class="btn-submit" style="text-decoration:none; text-align:center;">View Maintenance</a>
+                <a href="contact.html" class="btn-submit" style="text-decoration:none; text-align:center;">View Maintenance</a>
             </div>
         </div>
+    </section>
         
-<!--FOOTER-->
+    <button id="hf-chat-trigger" style="position: fixed; bottom: 20px; right: 20px; width: 85px; height: 85px; border-radius: 50%; background-color: #007bff; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; z-index: 2147483647; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: transform 0.2s ease; padding: 5px; box-sizing: border-box;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 2px;">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+      <span style="color: #ffffff; font-size: 9px; font-weight: bold; text-align: center; font-family: sans-serif; line-height: 1.1; word-spacing: 100vw;">Chat with Lisa</span>
+    </button>
+
+    <div id="hf-chatbox-container">
+      <div style="background-color: #007bff; color: #ffffff; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; height: 40px; box-sizing: border-box;">
+        <span style="font-size: 14px; font-weight: 600;">Lisa AI</span>
+        <div style="display: flex; gap: 14px; align-items: center;">
+          <button id="hf-minimize-btn" title="Minimize" style="background: none; border: none; color: #ffffff; cursor: pointer; font-size: 16px; padding: 0 2px; line-height: 1; opacity: 0.85;">—</button>
+          <button id="hf-close-btn" title="Close" style="background: none; border: none; color: #ffffff; cursor: pointer; font-size: 20px; padding: 0 2px; line-height: 1; opacity: 0.85;">&times;</button>
+        </div>
+      </div>
+
+      <div style="width: 100%; height: calc(100% - 40px);">
+        <iframe
+          src="https://sc-eng-chatbox.hf.space/?__theme=light"
+          frameborder="0"
+          width="100%"
+          height="100%"
+          allow="microphone">
+        </iframe>
+      </div>
+    </div>
+
+    <script>
+      const chatTrigger = document.getElementById('hf-chat-trigger');
+      const chatContainer = document.getElementById('hf-chatbox-container');
+      const minimizeBtn = document.getElementById('hf-minimize-btn');
+      const closeBtn = document.getElementById('hf-close-btn');
+
+      chatTrigger.addEventListener('click', function() {
+        if (chatContainer.style.display === 'none' || chatContainer.style.display === '') {
+          chatContainer.style.display = 'block';
+        } else {
+          chatContainer.style.display = 'none';
+        }
+      });
+
+      minimizeBtn.addEventListener('click', function() { chatContainer.style.display = 'none'; });
+      closeBtn.addEventListener('click', function() { chatContainer.style.display = 'none'; });
+    </script>
     <footer>
-        <p>&copy; 2024 SC Engineering |  info@sc-eng.co.za</p>
+        <p>&copy; 2024 SC Engineering | info@sc-eng.co.za</p>
         <p>Built for the distributed world.</p>
-<!--SOCIAL MEDIA-->
-        <a href="your-facebook-link"  target="_blank" class="fa fa-facebook"></a>
-        <a href="https://github.com" target="_blank" class="fa fa-github"></a>
-        <a href="https://linkedin.com" target="_blank" class="fa fa-linkedin"></a>
+        <div class="social-container">
+            <a href="your-facebook-link" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://github.com" target="_blank" class="fa fa-github"></a>
+            <a href="https://linkedin.com" target="_blank" class="fa fa-linkedin"></a>
+        </div>
     </footer>
 
 </body>
