@@ -1,19 +1,3 @@
-Yes, absolutely! Making this design fully responsive for both mobile phones and tablets is a fantastic move.
-
-The original code already had some responsive elements (like `display: grid` with `auto-fit`), but it had a few issues that would make it look broken on tablets and smaller phones. For instance, the navigation bar links would overlap, the hero layout didn't account for text wrapping, the margins were too wide for tablet screens, and your text input boxes would stretch awkwardly or overflow.
-
-Here is the upgraded, completely responsive, mobile-and-tablet-optimized version.
-
-### What Was Updated For Responsiveness:
-
-* **The Header/Navigation:** On mobile devices, the layout flips gracefully. The nav links drop seamlessly below the logo and self-center, ensuring they never overlap or clip off the edge of the screen.
-* **The Gallery & Pricing Grids:** The minimum widths were adjusted so cards stack beautifully in **1 column on phones**, **2 columns on tablets**, and **3 columns on desktops**.
-* **The Contact Form:** Input boxes now stack vertically into a single column on mobile and small tablets, ensuring users can actually type into them without horizontal scrolling.
-* **Padding & Typography:** Fixed hardcoded pixel margins that were too wide for smaller screens, switching them to flexible percentages and responsive clamping so sections dynamically resize.
-
-### The Responsive Code
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -528,8 +512,8 @@ Here is the upgraded, completely responsive, mobile-and-tablet-optimized version
 
       <!-- The App IFrame Area -->
       <div style="width: 100%; height: calc(100% - 40px);">
-        <iframe
-          src="https://sc-eng-chatbox.hf.space"
+       <iframe
+          src="https://sc-eng-chatbox.hf.space/?__theme=light"
           frameborder="0"
           width="100%"
           height="100%"
