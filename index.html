@@ -402,6 +402,43 @@
         </form>
     </div>
 </section>
+<!-- 🟢 FLOATING BUTTON CHATBOX START -->
+<!-- 1. The Small Round Floating Button -->
+<button id="hf-chat-trigger" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; border-radius: 50%; background-color: #007bff; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; z-index: 2147483647; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease;">
+  <!-- SVG Chat Icon inside the button -->
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+  </svg>
+</button>
+
+<!-- 2. The Chatbox Window Container (Hidden by default) -->
+<div id="hf-chatbox-container" style="display: none; position: fixed; bottom: 95px; right: 20px; width: 350px; height: 450px; z-index: 2147483647; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0; background-color: #ffffff;">
+  <iframe
+    src="PASTE_YOUR_HUGGING_FACE_DIRECT_URL_HERE"
+    frameborder="0"
+    width="100%"
+    height="100%"
+    allow="microphone">
+  </iframe>
+</div>
+
+<!-- 3. JavaScript to Handle the Click Action -->
+<script>
+  const chatTrigger = document.getElementById('hf-chat-trigger');
+  const chatContainer = document.getElementById('hf-chatbox-container');
+
+  chatTrigger.addEventListener('click', function() {
+    if (chatContainer.style.display === 'none') {
+      chatContainer.style.display = 'block';
+      // Optional effect: spin or change the button icon when open
+      chatTrigger.style.transform = 'rotate(90deg)';
+    } else {
+      chatContainer.style.display = 'none';
+      chatTrigger.style.transform = 'rotate(0deg)';
+    }
+  });
+</script>
+<!-- 🟢 FLOATING BUTTON CHATBOX END -->
 
 <!--FOOTER-->
     <footer>
