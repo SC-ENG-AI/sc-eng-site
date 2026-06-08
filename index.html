@@ -404,7 +404,7 @@
 </section>
 <!-- 🟢 SMART MOBILE-HIDDEN CHATBOX START -->
 <style>
-  /* Hides the entire chat application on small mobile screens */
+  /* Hides the entire chat application completely on small mobile screens */
   @media (max-width: 767px) {
     #hf-chatbox-container, #hf-chat-trigger {
       display: none !important;
@@ -418,14 +418,14 @@
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 2px;">
     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
   </svg>
-  <!-- Text Inside the Circle (Stacked neatly using word-spacing) -->
+  <!-- Text Inside the Circle -->
   <span style="color: #ffffff; font-size: 9px; font-weight: bold; text-align: center; font-family: sans-serif; line-height: 1.1; word-spacing: 100vw;">Chat with Lisa</span>
 </button>
 
-<!-- 2. The Integrated Chatbox Window Container (With Minimize and X Header Bar) -->
+<!-- 2. The Integrated Chatbox Window Container -->
 <div id="hf-chatbox-container" style="display: none; position: fixed; bottom: 120px; right: 20px; width: 350px; height: 490px; z-index: 2147483647; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0; background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
   
-  <!-- Custom Header Window Controls -->
+  <!-- Window Header Controls Bar -->
   <div style="background-color: #007bff; color: #ffffff; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; height: 40px; box-sizing: border-box;">
     <span style="font-size: 14px; font-weight: 600;">Lisa AI</span>
     <div style="display: flex; gap: 14px; align-items: center;">
@@ -436,10 +436,11 @@
     </div>
   </div>
 
-  <!-- The App Iframe Area -->
+  <!-- The App IFrame Area -->
   <div style="width: 100%; height: calc(100% - 40px);">
+    <!-- CORRECTED EMBED FORMAT LINK APPLIED BELOW -->
     <iframe
-      src="https://sc-eng-chatbox.hf.space"
+      src="https://huggingface.co"
       frameborder="0"
       width="100%"
       height="100%"
@@ -448,14 +449,13 @@
   </div>
 </div>
 
-<!-- 3. Integrated Script to Manage Actions -->
+<!-- 3. Script to Manage Click Interactions -->
 <script>
   const chatTrigger = document.getElementById('hf-chat-trigger');
   const chatContainer = document.getElementById('hf-chatbox-container');
   const minimizeBtn = document.getElementById('hf-minimize-btn');
   const closeBtn = document.getElementById('hf-close-btn');
 
-  // Toggle opening/closing when clicking the main round circle button
   chatTrigger.addEventListener('click', function() {
     if (chatContainer.style.display === 'none') {
       chatContainer.style.display = 'block';
@@ -464,12 +464,10 @@
     }
   });
 
-  // Action for the minimize button (Hides the window, keeps circle visible)
   minimizeBtn.addEventListener('click', function() {
     chatContainer.style.display = 'none';
   });
 
-  // Action for the Close 'X' button (Hides the window, keeps circle visible)
   closeBtn.addEventListener('click', function() {
     chatContainer.style.display = 'none';
   });
