@@ -402,43 +402,51 @@
         </form>
     </div>
 </section>
-<!-- 🟢 FLOATING BUTTON CHATBOX START -->
-<!-- 1. The Small Round Floating Button -->
-<button id="hf-chat-trigger" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; border-radius: 50%; background-color: #007bff; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; z-index: 2147483647; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease;">
-  <!-- SVG Chat Icon inside the button -->
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-  </svg>
-</button>
+    <!-- Your existing website content ends here -->
+    <!-- DO NOT TOUCH ANY CODE ABOVE THIS LINE -->
 
-<!-- 2. The Chatbox Window Container (Hidden by default) -->
-<div id="hf-chatbox-container" style="display: none; position: fixed; bottom: 95px; right: 20px; width: 350px; height: 450px; z-index: 2147483647; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0; background-color: #ffffff;">
-  <iframe
-    src="https://huggingface.co/embed/sc-eng/chatbox"
-    frameborder="0"
-    width="100%"
-    height="100%"
-    allow="microphone">
-  </iframe>
-</div>
+    <!-- 🟢 PLACE YOUR CHATBOX SCRIPT DIRECTLY BELOW THIS LINE -->
+    <!-- 1. The Round Floating Button with Text Inside -->
+    <button id="hf-chat-trigger" style="position: fixed; bottom: 20px; right: 20px; width: 85px; height: 85px; border-radius: 50%; background-color: #007bff; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; z-index: 2147483647; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: transform 0.2s ease; padding: 5px; box-sizing: border-box;">
+      <!-- Small Chat Icon -->
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 2px;">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+      <!-- Text Inside the Circle -->
+      <span style="color: #ffffff; font-size: 9px; font-weight: bold; text-align: center; font-family: sans-serif; line-height: 1.1; word-spacing: 100vw;">Chat with Lisa</span>
+    </button>
 
-<!-- 3. JavaScript to Handle the Click Action -->
-<script>
-  const chatTrigger = document.getElementById('hf-chat-trigger');
-  const chatContainer = document.getElementById('hf-chatbox-container');
+    <!-- 2. The Separate Page Chatbox Window Container -->
+    <div id="hf-chatbox-container" style="display: none; position: fixed; bottom: 120px; right: 20px; width: 350px; height: 450px; z-index: 2147483647; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0; background-color: #ffffff;">
+      <iframe src="chat.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
 
-  chatTrigger.addEventListener('click', function() {
-    if (chatContainer.style.display === 'none') {
-      chatContainer.style.display = 'block';
-      // Optional effect: spin or change the button icon when open
-      chatTrigger.style.transform = 'rotate(90deg)';
-    } else {
-      chatContainer.style.display = 'none';
-      chatTrigger.style.transform = 'rotate(0deg)';
-    }
-  });
-</script>
-<!-- 🟢 FLOATING BUTTON CHATBOX END -->
+    <!-- 3. Script to Manage Opening and Closing -->
+    <script>
+      const chatTrigger = document.getElementById('hf-chat-trigger');
+      const chatContainer = document.getElementById('hf-chatbox-container');
+
+      // Open and Close from the main button
+      chatTrigger.addEventListener('click', function() {
+        if (chatContainer.style.display === 'none') {
+          chatContainer.style.display = 'block';
+        } else {
+          chatContainer.style.display = 'none';
+        }
+      });
+
+      // Close signal sent from the 'X' inside chat.html
+      window.addEventListener('message', function(event) {
+        if (event.data === 'closeHFChatbox') {
+          chatContainer.style.display = 'none';
+        }
+      });
+    </script>
+    <!-- 🟢 PLACE YOUR CHATBOX SCRIPT DIRECTLY ABOVE THIS LINE -->
+
+  </body>
+</html>
+
 
 <!--FOOTER-->
     <footer>
